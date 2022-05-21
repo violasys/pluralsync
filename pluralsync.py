@@ -246,7 +246,7 @@ for m in sp.members():
 def sync_member(spm, pkm):
     print(f'sync {spm.name} -> {pkm.name}')
     properties = [
-        ('name', spm.name, pkm.name),
+        #('name', spm.name, pkm.name),
         ('display_name', spm.name if pkm.display_name == pkm.name else pkm.display_name, pkm.display_name),
         ('pronouns', spm.pronouns, pkm.pronouns),
         ('color', spm.color.lstrip('#') if spm.color else None, pkm.color),
@@ -256,7 +256,7 @@ def sync_member(spm, pkm):
     update = {
         'id': pkm.id,
         'uuid': pkm.uuid,
-        'name': spm.name,
+        #'name': spm.name,
         'color': pkm.color,
         'keep_proxy': False,
     }
